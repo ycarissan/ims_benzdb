@@ -9,6 +9,7 @@
 # In[1]:
 
 
+molecule_dir="data"
 molecule_name="0-1-3"
 map_type="R" # can be "R" or "U"
 
@@ -127,8 +128,8 @@ def getDataFromCSV(filename):
 # In[4]:
 
 
-geomfile="{}_reopt.xyz".format(molecule_name)
-csvfile="{}_{}.csv".format(map_type, molecule_name)
+geomfile="{}/{}_reopt.xyz".format(molecule_dir,molecule_name)
+csvfile="{}/{}_{}.csv".format(molecule_dir, map_type, molecule_name)
 
 labels, coords = getCoords(geomfile)
 bonds=getBonds(coords)
