@@ -196,8 +196,9 @@ if show_atoms:
 #
 # Save as image if requested
 #
+image_dir="img"
 if save_as_image:
-    imgfile="{}_{}.{}".format(map_type, molecule_name, image_format)
+    imgfile="{}/{}_{}.{}".format(image_dir, map_type, molecule_name, image_format)
     plt.savefig(imgfile)
 
 plt.show()
